@@ -38,6 +38,7 @@ async def 경매(ctx,*para):
     cost = math.ceil(cost * 0.95)
     embed.add_field(name="4인", value=f"{math.ceil(math.ceil(cost*3/4)/1.1)} 골드 / {math.ceil(cost*3/4)} 골드", inline=False)
     embed.add_field(name="8인", value=f"{math.ceil(math.ceil(cost*7/8)/1.1)} 골드 / {math.ceil(cost*7/8)} 골드", inline=False)
+    embed.add_field(name="16인", value=f"{math.ceil(math.ceil(cost*29/30)/1.1)} 골드 / {math.ceil(cost*29/30)} 골드", inline=False)
     await ctx.send(embed=embed)
 
 @client.command()
