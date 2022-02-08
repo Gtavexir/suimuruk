@@ -28,7 +28,7 @@ async def on_ready():
 #     embed.add_field(name="페온 1개", value=f"{int(cost)} 골드", inline=False)
 #     await ctx.send(embed=embed)
 
-@client.command
+@client.command()
 async def help(ctx):
     embed=discord.Embed(title="명령어", description="현재 사용 가능한 명령어 목록입니다.", color=0x36fa00)
     embed.add_field(name="$경매 '현재 골드 시세'", value="레이드 경매 물품을 '판매' 할 때 손익분기점이 몇 골드인지 확인할 수 있습니다.\n해당 골드보다 상회 입찰 할 경우 손해입니다(사용은 또 달라요).\n다음과 같이 사용합니다.\n$경매 1700", inline=False)
