@@ -42,6 +42,12 @@ async def 경매(ctx,*para):
     await ctx.send(embed=embed)
 
 @client.command()
+async def 군단장(ctx):
+    embed=discord.Embed(title="군단장 공략", description="모모코가 참고하면 좋은 군단장 레이드 공략!", color=0xff0000)
+    embed.add_field(name="아브렐슈드 노말", value="https://www.inven.co.kr/board/lostark/4811/4163396", inline=False)
+    await ctx.send(embed=embed)
+
+@client.command()
 async def help(ctx):
     embed=discord.Embed(title="명령어", description="현재 사용 가능한 명령어 목록입니다.", color=0x36fa00)
     embed.add_field(name="$경매 '경매 물품 경매소 가격'", value="레이드 경매 물품을 '판매' 할 때 손익분기점이 몇 골드인지 확인할 수 있습니다.\n해당 골드보다 상회 입찰 할 경우 손해입니다(사용은 또 달라요).\n다음과 같이 사용합니다.\n$경매 1700", inline=False)
