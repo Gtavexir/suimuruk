@@ -8,7 +8,7 @@ client = commands.Bot(command_prefix = '$', help_command = None)
 @client.event
 async def on_ready():
   await client.change_presence(status=discord.Status.online)
-  await client.change_presence(activity=discord.Game(name="개발 당"))
+  await client.change_presence(activity=discord.Game(name="2022년 02월 09일 지속된 웹혐으로 인한 파업"))
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
   
 @client.command()
