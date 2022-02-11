@@ -50,7 +50,8 @@ async def 발탄(ctx):
     embed.add_field(name="하드\n1관문", value="1000G, 뼈 3개\n**더보기**\n900G, 뼈 3개", inline=True)
     embed.add_field(name="\u200b", value="\u200b", inline=True)
     embed.add_field(name="\u200b\n2관문", value="3500G, 뼈 3개\n**더보기**\n1200G, 뼈 3개", inline=True)
-    embed.add_field(name="최종보상 with 더보기", value="노말\n1200G, 힘줄 12개, 뼈 6개\n하드\n2400G, 뼈 12개", inline=False)
+    embed.add_field(name="최종보상 without 더보기", value="노말\n2500G, 힘줄 6개, 뼈 3개\n하드\n4500G, 뼈 6개", inline=False)
+    embed.add_field(name="최종보상 with 더보기", value="노말\n1200G, 힘줄 12개, 뼈 6개\n하드\n2400G, 뼈 12개", inline=True)
     await ctx.send(embed=embed)
     
 @client.command()
@@ -62,6 +63,7 @@ async def 비아키스(ctx):
     embed.add_field(name="하드\n1관문", value="1000G, 날개 2개\n**더보기**\n700G, 날개 2개", inline=True)
     embed.add_field(name="\u200b\n2관문", value="1000G, 날개 2개\n**더보기**\n900G, 날개 2개", inline=True)
     embed.add_field(name="\u200b\n3관문", value="2500G, 날개 2개\n**더보기**\n1200G, 날개 2개", inline=True)
+    embed.add_field(name="최종보상 without 더보기", value="노말\n2500G, 송곳니 6개, 날개 3개\n하드\n4500G, 날개 6개", inline=True)
     embed.add_field(name="최종보상 with 더보기", value="노말\n700G, 송곳니 12개, 날개 6개\n하드\n1700G, 날개 12개", inline=False)
     await ctx.send(embed=embed)
 
