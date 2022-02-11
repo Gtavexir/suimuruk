@@ -42,9 +42,9 @@ async def 경매(ctx,*para):
     await ctx.send(embed=embed)
 
 @client.command()
-async def 군단장(ctx):
-    embed=discord.Embed(title="군단장 공략", description="모모코가 참고하면 좋은 군단장 레이드 공략!", color=0xff0000)
-    embed.add_field(name="아브렐슈드 노말", value="https://www.inven.co.kr/board/lostark/4811/4163396", inline=False)
+async def 보상(ctx):
+    embed=discord.Embed(title="보상", description="레이드 보상 정리입니다.", color=0xffea00)
+    embed.add_field(name="발탄 노말", value="1관문: 500G, 마수의 힘줄 3개 마수의 뼈 1개\n2관문: 2000G, 마수의 힘줄 3개, 마수의 뼈 2개", inline=False)
     await ctx.send(embed=embed)
 
 @client.command()
