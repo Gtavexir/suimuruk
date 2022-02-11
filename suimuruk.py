@@ -44,7 +44,8 @@ async def 경매(ctx,*para):
 @client.command()
 async def 보상(ctx):
     embed=discord.Embed(title="보상", description="레이드 보상 정리입니다.", color=0xffea00)
-    embed.add_field(name="발탄 노말", value="1관문: 500G, 마수의 힘줄 3개 마수의 뼈 1개\n2관문: 2000G, 마수의 힘줄 3개, 마수의 뼈 2개", inline=False)
+    embed.add_field(name="발탄 노말", value="1관문: 500G, 힘줄 3개, 뼈 1개\n더보기: 500G, 힘줄 3개, 뼈 1개\n2관문: 2000G, 힘줄 3개, 뼈 2개\n더보기: 800G, 힘줄 3개, 뼈 2개", inline=False)
+    embed.add_field(name="발탄 노말", value="", inline=False)
     await ctx.send(embed=embed)
 
 @client.command()
