@@ -8,7 +8,7 @@ client = commands.Bot(command_prefix = '$', help_command = None)
 @client.event
 async def on_ready():
   await client.change_presence(status=discord.Status.online)
-  await client.change_presence(activity=discord.Game(name="2022년 02월 09일 지속된 웹혐으로 인한 파업"))
+  await client.change_presence(activity=discord.Game(name="개발 당"))
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
   
 @client.command()
@@ -42,10 +42,27 @@ async def 경매(ctx,*para):
     await ctx.send(embed=embed)
 
 @client.command()
-async def 보상(ctx):
-    embed=discord.Embed(title="보상", description="레이드 보상 정리입니다.", color=0xffea00)
-    embed.add_field(name="발탄 노말", value="1관문: 500G, 힘줄 3개, 뼈 1개\n더보기: 500G, 힘줄 3개, 뼈 1개\n2관문: 2000G, 힘줄 3개, 뼈 2개\n더보기: 800G, 힘줄 3개, 뼈 2개", inline=False)
-    embed.add_field(name="발탄 노말", value="", inline=False)
+async def 발탄(ctx):
+    embed=discord.Embed(title="발탄 레이드 보상 및 더보기", description="발탄 난이도별 보상 및 더보기 정보입니다.", color=0x00ffbf)
+    embed.add_field(name="노말\n1관문", value="500G, 힘줄 3개, 뼈 1개\n**더보기**\n500G, 힘줄 3개, 뼈 1개", inline=True)
+    embed.add_field(name="\u200b", value="\u200b", inline=True)
+    embed.add_field(name="\u200b\n2관문", value="2000G, 힘줄 3개, 뼈 2개\n**더보기**\n800G, 힘줄 3개, 뼈 2개", inline=True)
+    embed.add_field(name="하드\n1관문", value="1000G, 뼈 3개\n**더보기**\n900G, 뼈 3개", inline=True)
+    embed.add_field(name="\u200b", value="\u200b", inline=True)
+    embed.add_field(name="\u200b\n2관문", value="3500G, 뼈 3개\n**더보기**\n1200G, 뼈 3개", inline=True)
+    embed.add_field(name="최종보상 with 더보기", value="노말\n1200G, 힘줄 12개, 뼈 6개\n하드\n2400G, 뼈 12개", inline=False)
+    await ctx.send(embed=embed)
+    
+@client.command()
+async def 비아키스(ctx):
+    embed=discord.Embed(title="비아키스 레이드 보상 및 더보기", description="비아키스 난이도별 보상 및 더보기 정보입니다.", color=0xa80000)
+    embed.add_field(name="노말\n1관문", value="500G, 송곳니 2개, 날개 1개\n**더보기**\n400G, 송곳니 2개, 날개 1개", inline=True)
+    embed.add_field(name="\u200b\n2관문", value="600G, 송곳니 2개, 날개 1개\n**더보기**\n600G, 송곳니 2개, 날개 1개", inline=True)
+    embed.add_field(name="\u200b\n3관문", value="1400G, 송곳니 2개, 날개 1개\n**더보기**\n800G, 송곳니 2개, 날개 1개", inline=True)
+    embed.add_field(name="하드\n1관문", value="1000G, 날개 2개\n**더보기**\n700G, 날개 2개", inline=True)
+    embed.add_field(name="\u200b\n2관문", value="1000G, 날개 2개\n**더보기**\n900G, 날개 2개", inline=True)
+    embed.add_field(name="\u200b\n3관문", value="2500G, 날개 2개\n**더보기**\n1200G, 날개 2개", inline=True)
+    embed.add_field(name="최종보상 with 더보기", value="노말\n700G, 송곳니 12개, 날개 6개\n하드\n1700G, 날개 12개", inline=False)
     await ctx.send(embed=embed)
 
 @client.command()
@@ -60,5 +77,5 @@ async def help(ctx):
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
     	await ctx.send("명령어를 찾지 못했습니다")
-
+     
 client.run(os.environ['token'])
