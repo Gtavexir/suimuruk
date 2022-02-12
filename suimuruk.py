@@ -55,7 +55,7 @@ async def 발탄(ctx):
     await ctx.send(embed=embed)
     
 @client.command()
-async def 비아키스(ctx):
+async def 비아(ctx):
     embed=discord.Embed(title="비아키스 레이드 보상 및 더보기", description="비아키스 난이도별 보상 및 더보기 정보입니다.", color=0xa80000)
     embed.add_field(name="노말\n1관문", value="500G, 송곳니 2개, 날개 1개\n**더보기**\n400G, 송곳니 2개, 날개 1개", inline=True)
     embed.add_field(name="\u200b\n2관문", value="600G, 송곳니 2개, 날개 1개\n**더보기**\n600G, 송곳니 2개, 날개 1개", inline=True)
@@ -65,6 +65,32 @@ async def 비아키스(ctx):
     embed.add_field(name="\u200b\n3관문", value="2500G, 날개 2개\n**더보기**\n1200G, 날개 2개", inline=True)
     embed.add_field(name="최종보상 without 더보기", value="노말\n2500G, 송곳니 6개, 날개 3개\n하드\n4500G, 날개 6개", inline=True)
     embed.add_field(name="최종보상 with 더보기", value="노말\n700G, 송곳니 12개, 날개 6개\n하드\n1700G, 날개 12개", inline=True)
+    await ctx.send(embed=embed)
+    
+@client.command()
+async def 쿠크(ctx):
+    embed=discord.Embed(title="쿠크세이튼 레이드 보상 및 더보기", description="쿠크세이튼 난이도별 보상 및 더보기 정보입니다.", color=0xa80000)
+    embed.add_field(name="노말\n1관문", value="1000G, 나팔 1개\n**더보기**\n800G, 나팔 1개", inline=True)
+    embed.add_field(name="\u200b\n2관문", value="1000G, 나팔 2개\n**더보기**\n1000G, 나팔 2개", inline=True)
+    embed.add_field(name="\u200b\n3관문", value="2500G, 나팔 2개\n**더보기**\n1300G, 나팔 2개", inline=True)
+    # embed.add_field(name="하드\n1관문", value="1000G, 날개 2개\n**더보기**\n700G, 날개 2개", inline=True)
+    # embed.add_field(name="\u200b\n2관문", value="1000G, 날개 2개\n**더보기**\n900G, 날개 2개", inline=True)
+    # embed.add_field(name="\u200b\n3관문", value="2500G, 날개 2개\n**더보기**\n1200G, 날개 2개", inline=True)
+    embed.add_field(name="최종보상 without 더보기", value="노말\n4500G, 나팔 5개", inline=True)
+    embed.add_field(name="최종보상 with 더보기", value="노말\n1400G, 나팔 10개", inline=True)
+    await ctx.send(embed=embed)
+    
+@client.command()
+async def 아브(ctx):
+    embed=discord.Embed(title="아브렐슈드 레이드 보상 및 더보기", description="아브렐슈드 난이도별 보상 및 더보기 정보입니다.", color=0xa80000)
+    embed.add_field(name="노말\n12관문", value="4500G, 뿔 7개\n**더보기**\n1000G, 뿔 7개", inline=True)
+    embed.add_field(name="\u200b\n34관문", value="1500G, 뿔 7개\n**더보기**\n1500G, 뿔 7개", inline=True)
+    embed.add_field(name="\u200b\n56관문", value="2500G, 뿔 8개\n**더보기**\n2000G, 뿔 8개", inline=True)
+    embed.add_field(name="하드\n12관문", value="5500G, 사념 7개\n**더보기**\n1500G, 사념 7개", inline=True)
+    embed.add_field(name="\u200b\n34관문", value="2000G, 사념 7개\n**더보기**\n2000G, 사념 7개", inline=True)
+    embed.add_field(name="\u200b\n56관문", value="3000G, 사념 8개\n**더보기**\n2500G, 사념 8개", inline=True)
+    embed.add_field(name="최종보상 without 더보기", value="노말\n8500G, 뿔 22개\n하드\n10500G, 사념 22개", inline=True)
+    embed.add_field(name="최종보상 with 더보기", value="노말\n4500G, 뿔 44개\n하드\n5500G, 사념 44개", inline=True)
     await ctx.send(embed=embed)
 
 @client.command()
