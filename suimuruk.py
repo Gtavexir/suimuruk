@@ -12,17 +12,25 @@ async def on_ready():
   print("봇 이름:",client.user.name,"봇 아이디:",client.user.id,"봇 버전:",discord.__version__)
   
 @client.command()
-async def 페온(ctx, para):
+async def 페온(ctx, *, para):
     try:
-        cost = int(para)
+        para = para.split()
+        cost = int(para[0])
+        if len(para) == 2:
+            cnt = int(para[1])
     except:
         embed=discord.Embed(title="페온 계산기", color=0x0091ff)
-        embed.add_field(name="오류", value="잘못된 입력입니다. 다음과 같이 입력해주세요.\n예) $페온 (현재 골드시세)", inline=False)
+        embed.add_field(name="오류", value="잘못된 입력입니다. 다음과 같이 입력해주세요.\n예) $페온 (현재 골드시세)\n예) $페온 (현재 골드시세) (페온개수)", inline=False)
         await ctx.send(embed=embed)
         return
-    embed=discord.Embed(title="페온 계산기", description="페온 1개당 골드 가격", color=0x0091ff)
-    embed.add_field(name="페온 1개", value=f"{math.ceil(cost*17/190)} 골드", inline=False)
-    await ctx.send(embed=embed)
+    if len(para) == 1:
+        embed=discord.Embed(title="페온 계산기", description="페온 1개 골드 가격", color=0x0091ff)
+        embed.add_field(name="페온 1개", value=f"{math.ceil(cost*17/190)}G", inline=False)
+        await ctx.send(embed=embed)
+    else:
+        embed=discord.Embed(title="페온 계산기", description=f"페온 {cnt}개 골드 가격", color=0x0091ff)
+        embed.add_field(name=f"페온 {cnt}개", value=f"{math.ceil(cost*17/190)*cnt}G", inline=False)
+        await ctx.send(embed=embed)
 
 @client.command()
 async def 경매(ctx,*para):
