@@ -50,6 +50,14 @@ async def 경매(ctx,*para):
     await ctx.send(embed=embed)
 
 @client.command()
+async def 아르고스(ctx):
+    embed=discord.Embed(title="아르고스 레이드 보상", description="아르고스 레이드 보상 정보입니다.", color=0x00ffbf)
+    embed.add_field(name="1관문", value="1500G, 어금니 6, 발톱 16, 선혈 0~1, 힘줄 0~1", inline=False)
+    embed.add_field(name="2관문", value="2300G, 어금니 8, 발톱 21, 선혈 1~2, 힘줄 1~2", inline=False)
+    embed.add_field(name="3관문", value="3300G, 어금니 9, 발톱 23, 선혈 3~4, 힘줄 3~4", inline=False)
+    await ctx.send(embed=embed)
+
+@client.command()
 async def 발탄(ctx):
     embed=discord.Embed(title="발탄 레이드 보상 및 더보기", description="발탄 난이도별 보상 및 더보기 정보입니다.", color=0x00ffbf)
     embed.add_field(name="노말\n1관문", value="500G, 힘줄 3개, 뼈 1개\n**더보기**\n500G, 힘줄 3개, 뼈 1개", inline=True)
@@ -107,10 +115,11 @@ async def help(ctx):
     embed.add_field(name="$경매 '경매 물품 경매소 가격'", value="레이드 경매 물품을 '판매' 할 때 손익분기점이 몇 골드인지 확인할 수 있습니다.\n해당 골드보다 상회 입찰 할 경우 손해입니다(사용은 또 달라요).\n다음과 같이 사용합니다.\n$경매 1700", inline=False)
     embed.add_field(name="$페온 '현재 골드 시세'", value="페온 1개당 몇 골드인지 현재 골드 시세를 바탕으로 계산해줍니다.\n다음과 같이 사용합니다.\n$페온 1700", inline=False)
     embed.add_field(name="$페온 '현재 골드 시세' '페온 개수'", value="입력한 페온 개수당 몇 골드인지 현재 골드 시세를 바탕으로 계산해줍니다.\n다음과 같이 사용합니다.\n$페온 1700 30", inline=False)
+    embed.add_field(name="$알고", value="아르고스 레이드 보상 및 더보기 정보입니다.", inline=False)
     embed.add_field(name="$발탄", value="발탄 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$비아키스", value="비아키스 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$쿠크세이튼", value="쿠크세이튼 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$아브렐슈드", value="아브렐슈드 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$비아", value="비아키스 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$쿠크", value="쿠크세이튼 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$아브", value="아브렐슈드 레이드 보상 및 더보기 정보입니다.", inline=False)
     embed.set_footer(text="아직 개발중인 봇으로 기능이 추가될 수 있습니다.\nmade by WebView")
     await ctx.send(embed=embed)
 
@@ -120,10 +129,11 @@ async def 도움(ctx):
     embed.add_field(name="$경매 '경매 물품 경매소 가격'", value="레이드 경매 물품을 '판매' 할 때 손익분기점이 몇 골드인지 확인할 수 있습니다.\n해당 골드보다 상회 입찰 할 경우 손해입니다(사용은 또 달라요).\n다음과 같이 사용합니다.\n$경매 1700", inline=False)
     embed.add_field(name="$페온 '현재 골드 시세'", value="페온 1개당 몇 골드인지 현재 골드 시세를 바탕으로 계산해줍니다.\n다음과 같이 사용합니다.\n$페온 1700", inline=False)
     embed.add_field(name="$페온 '현재 골드 시세' '페온 개수'", value="입력한 페온 개수당 몇 골드인지 현재 골드 시세를 바탕으로 계산해줍니다.\n다음과 같이 사용합니다.\n$페온 1700 30", inline=False)
+    embed.add_field(name="$알고", value="아르고스 레이드 보상 및 더보기 정보입니다.", inline=False)
     embed.add_field(name="$발탄", value="발탄 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$비아키스", value="비아키스 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$쿠크세이튼", value="쿠크세이튼 레이드 보상 및 더보기 정보입니다.", inline=False)
-    embed.add_field(name="$아브렐슈드", value="아브렐슈드 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$비아", value="비아키스 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$쿠크", value="쿠크세이튼 레이드 보상 및 더보기 정보입니다.", inline=False)
+    embed.add_field(name="$아브", value="아브렐슈드 레이드 보상 및 더보기 정보입니다.", inline=False)
     embed.set_footer(text="아직 개발중인 봇으로 기능이 추가될 수 있습니다.\nmade by WebView")
     await ctx.send(embed=embed)
 
