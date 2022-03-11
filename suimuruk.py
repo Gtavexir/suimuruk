@@ -50,8 +50,8 @@ async def 경매(ctx,*para):
     await ctx.send(embed=embed)
 
 @client.command()
-async def 아르고스(ctx):
-    embed=discord.Embed(title="아르고스 레이드 보상", description="아르고스 레이드 보상 정보입니다.", color=0x00ffbf)
+async def 알고(ctx):
+    embed=discord.Embed(title="아르고스 레이드 보상", description="아르고스 레이드 보상 정보입니다.", color=0xc2f3ff)
     embed.add_field(name="1관문", value="1500G, 어금니 6, 발톱 16, 선혈 0~1, 힘줄 0~1", inline=False)
     embed.add_field(name="2관문", value="2300G, 어금니 8, 발톱 21, 선혈 1~2, 힘줄 1~2", inline=False)
     embed.add_field(name="3관문", value="3300G, 어금니 9, 발톱 23, 선혈 3~4, 힘줄 3~4", inline=False)
